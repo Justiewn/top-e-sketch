@@ -29,4 +29,17 @@ function resetPad() {
     createPad();
 }
 
+etchPad.addEventListener('mouseover', (e) => {
+    const hoveredElement = e.target;
+    if (!(hoveredElement.classList.contains('pixel'))) return;
+    console.log("what");
+    hoveredElement.style.cssText = `background: #${Math.floor(Math.random()*16777215).toString(16)}`;
+})
+
+etchPad.addEventListener('transitionend', (e) => {
+    const element = e.target;
+    if (!(element.classList.contains('pixel'))) return;
+    element.style.cssText = `background: white;`;
+})
+
 createPad();

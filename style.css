@@ -2,6 +2,23 @@
     border: 1px solid black;
 } */
 
+body{
+    background-color: hsla(36, 100%, 40%, 0.897);
+}
+
+#top-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    margin: 1rem;
+    width: 8ch;
+    height: 6ch;
+}
+
 #main-div {
     display: flex;
     align-items: center;
@@ -9,16 +26,11 @@
 }
 
 #etch-div {
-    height: 700px; 
-    width: 700px;
+    height: 600px; 
+    width: 600px;
     display: grid; 
     border: 1px solid black;
 }
-
-.pixel {
-    transition: all .5s ease;
-}
-
 
 /* .pixel:hover {
     background-color: black;

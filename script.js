@@ -18,13 +18,14 @@ function createPad() {
 }
 
 function resetPad() {
-    while (etchPad.firstChild) {
-        etchPad.removeChild(etchPad.lastChild);
-    }
     let valueAccepted = false;
     while (!valueAccepted) {
         size = prompt("Speficy size of new pad (must be 100 or lower):");
         if (size <= 100) { valueAccepted = true; }
+    }
+    if (size === null) return;
+    while (etchPad.firstChild) {
+        etchPad.removeChild(etchPad.lastChild);
     }
     createPad();
 }
@@ -38,6 +39,7 @@ etchPad.addEventListener('mouseup', (e) => {
     clicked = false;
 })
 
+// comment to switch out
 etchPad.addEventListener('mouseover', (e) => {
     if (clicked) {
         const hoveredElement = e.target;
